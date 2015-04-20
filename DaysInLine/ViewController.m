@@ -87,6 +87,7 @@ const int LABEL_SPACE  = 30;
 
 
 
+
 SystemSoundID soundFileObject;
 bool todayRedrawDone;
 bool hasPassWord;
@@ -228,18 +229,21 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     NSDate *curDate = [NSDate date];//获取当前日期
     [formater setDateFormat:@"yyyy-MM-dd"];
     self.today= [formater stringFromDate:curDate];
+    
+    //eric:fix for apple watch
+    modifyDate = self.today;
+
     NSLog(@"!!!!!!!%@",self.today);
     
     
     
     //创建或打开数据库
-    NSString *docsDir;
-    NSArray *dirPaths;
+
     
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
+    NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
+    NSString *docsPath = [storeURL absoluteString];
     
-    databasePath = [[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent:@"info.sqlite"]];
+    databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     
     //   NSFileManager *filemanager = [NSFileManager defaultManager];
     
@@ -538,13 +542,42 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
 //    [self.view addSubview:self.gAdBannerView];
 
+    [super viewDidAppear:animated];
     
     static int times = 0;
     times++;
     
-  //  NSString* cName = [NSString stringWithFormat:@"%@",  self.navigationItem.title, nil];
-  //  NSLog(@"current appear tab title %@", cName);
-    //[[Frontia getStatistics] pageviewStartWithName:@"mainView"];
+
+    [self shareTappedWithActionSheet:nil];
+    
+    
+    
+    
+    NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
+    NSString *docsPath = [storeURL absoluteString];
+    NSString *dayImagePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:modifyDate]];
+    
+
+
+    
+    
+    NSError *error;
+
+    NSFileManager *fileManager =[NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:dayImagePath] == YES)
+    {
+        
+        [[NSFileManager defaultManager] removeItemAtPath:dayImagePath error:&error];
+        NSLog(@"Error description-%@ \n", [error localizedDescription]);
+        NSLog(@"Error reason-%@", [error localizedFailureReason]);
+        
+    }
+    
+        
+    NSData *imageData = UIImagePNGRepresentation(self.shareImg);
+    [imageData writeToFile:dayImagePath atomically:NO];
+
+    
 }
 
 -(void) viewDidDisappear:(BOOL)animated
@@ -707,7 +740,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     }
     [self.my_dayline.addMoreLife addTarget:self action:@selector(eventTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.my_dayline.addMoreWork addTarget:self action:@selector(eventTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.my_dayline.shareBtn addTarget:self action:@selector(shareTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.my_dayline.shareBtn addTarget:self action:@selector(shareTappedWithActionSheet:) forControlEvents:UIControlEventTouchUpInside];
     
 
     self.my_dayline.dateNow.text = modifyDate;
@@ -1015,17 +1048,20 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
 }
 */
 
--(void)shareTapped
+-(void)shareTappedWithActionSheet:(id)button
 {
-    CustomActionSheet* sheet = [[CustomActionSheet alloc] initWithButtons:[NSArray arrayWithObjects:
-                                                                            [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"weixin"] title:@"微信好友"],
-                                                                            [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"wx_friend"] title:@"朋友圈"],
-                                                                            [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"wx_favorite"] title:@"收藏到微信"],
-//                                                                            [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"weibo"] title:@"新浪微博"],[CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"Qzone"] title:@"QQ空间"],[CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"qq"] title:@"QQ好友"],
-                                                                           
-                                                                            nil]];
-    sheet.delegate = self;
-    [sheet showInView:self.view];
+    if (button) {
+        
+        
+        CustomActionSheet* sheet = [[CustomActionSheet alloc] initWithButtons:[NSArray arrayWithObjects:
+                                                                               [CustomActionSheetButton buttonWithImage:[UIImage
+                                                                                                                         imageNamed:@"weixin"] title:@"微信好友"],
+                                                                               [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"wx_friend"] title:@"朋友圈"],
+                                                                               [CustomActionSheetButton buttonWithImage:[UIImage imageNamed:@"wx_favorite"] title:@"收藏到微信"],
+                                                                               nil]];
+        sheet.delegate = self;
+        [sheet showInView:self.view];
+    }
     
     if (self.my_dayline.hidden == NO) {
         
@@ -1079,23 +1115,19 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     [self.finalShare addSubview:lifeLabel];
     
     
-    UIGraphicsBeginImageContext(self.finalShare.frame.size);
     
     
-    //获取图像
-    [ self.finalShare.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(self.finalShare.frame.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(self.finalShare.frame.size);
+    [self.finalShare.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-  //  self.shareImg =image;
+
     self.shareImg = [self halfCutShareImg:image];
-//   
-//    UIImageView *testView = [[UIImageView alloc]initWithImage:self.shareImg];
-//    testView.frame = CGRectMake(0, 0, self.finalShare.frame.size.width, self.finalShare.frame.size.height) ;
-//    
-//    NSLog(@"width:%f,height:%f",self.finalShare.frame.size.width, self.finalShare.frame.size.height);
-//    
-//    [self.view addSubview:testView];
+
     
 
 }
@@ -1129,7 +1161,15 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     [wholeView addSubview:fourth];
     [wholeView addSubview:shareTitle];
     
-    UIGraphicsBeginImageContext(wholeView.frame.size);
+    
+    
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(wholeView.frame.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(wholeView.frame.size);
+
+    
+//    UIGraphicsBeginImageContext(wholeView.frame.size);
     [wholeView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *entireOne = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -1363,7 +1403,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
         [self.my_selectDay.addMoreLife addTarget:self action:@selector(eventTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self.my_selectDay.addMoreWork addTarget:self action:@selector(eventTapped:) forControlEvents:UIControlEventTouchUpInside];
         
-        [self.my_selectDay.shareBtn addTarget:self action:@selector(shareTapped) forControlEvents:UIControlEventTouchUpInside];
+        [self.my_selectDay.shareBtn addTarget:self action:@selector(shareTappedWithActionSheet:) forControlEvents:UIControlEventTouchUpInside];
 
         
         

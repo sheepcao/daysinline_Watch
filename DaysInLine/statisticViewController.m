@@ -90,13 +90,10 @@ double expendAll;
 
     [my_result.continueButton addTarget:self action:@selector(continueButton:) forControlEvents:UIControlEventTouchUpInside];
     //创建或打开数据库
-    NSString *docsDir;
-    NSArray *dirPaths;
+    NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
+    NSString *docsPath = [storeURL absoluteString];
     
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    databasePath = [[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent:@"info.sqlite"]];
+    databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     
     NSLog(@"$$$$$$ %@ , %@$$$$$$",self.startDate,self.endDate);
     

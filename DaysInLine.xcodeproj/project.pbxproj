@@ -190,6 +190,7 @@
 		0BFF71E818C76D130011AFDE /* editView586@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF71E718C76D130011AFDE /* editView586@2x.png */; };
 		0BFF71EA18C7792C0011AFDE /* 标签.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF71E918C7792C0011AFDE /* 标签.png */; };
 		134E8AFE189CEC6700C2F805 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134E8AFD189CEC6700C2F805 /* CustomIOS7AlertView.m */; };
+		A415753B1AE0E6B100619974 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A415753A1AE0E6B100619974 /* Event.m */; };
 		A43800071A7F40A300515DD5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A438FFFD1A7F40A300515DD5 /* ioapi.c */; };
 		A43800081A7F40A300515DD5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A438FFFF1A7F40A300515DD5 /* mztools.c */; };
 		A43800091A7F40A300515DD5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A43800011A7F40A300515DD5 /* unzip.c */; };
@@ -207,6 +208,28 @@
 		A438FFF41A7F3FBD00515DD5 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFEE1A7F3FBD00515DD5 /* CJSONDeserializer.m */; };
 		A438FFF51A7F3FBD00515DD5 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFF01A7F3FBD00515DD5 /* CJSONSerializer.m */; };
 		A438FFF61A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFF31A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m */; };
+		A465D2181ADF7E8C002CE071 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2171ADF7E8C002CE071 /* InterfaceController.m */; };
+		A465D21A1ADF7E8C002CE071 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465D2191ADF7E8C002CE071 /* Images.xcassets */; };
+		A465D21E1ADF7E8C002CE071 /* DaysInLine WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A465D21D1ADF7E8C002CE071 /* DaysInLine WatchKit App.app */; };
+		A465D2261ADF7E8C002CE071 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465D2241ADF7E8C002CE071 /* Interface.storyboard */; };
+		A465D2281ADF7E8C002CE071 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465D2271ADF7E8C002CE071 /* Images.xcassets */; };
+		A465D22B1ADF7E8D002CE071 /* DaysInLine WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A465D2121ADF7E8C002CE071 /* DaysInLine WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A465D2331ADF9179002CE071 /* backgroundHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD7008218139338004FCBE2 /* backgroundHome.png */; };
+		A465D2361ADF936D002CE071 /* rowInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2351ADF936D002CE071 /* rowInterfaceController.m */; };
+		A465D23A1ADFA1C2002CE071 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1F192E18D49529000F94E5 /* text.png */; };
+		A465D23D1ADFA492002CE071 /* MonthInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D23C1ADFA492002CE071 /* MonthInterfaceController.m */; };
+		A465D2401ADFAC43002CE071 /* DaysInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D23F1ADFAC43002CE071 /* DaysInterfaceController.m */; };
+		A465D24D1ADFACE7002CE071 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2431ADFACE6002CE071 /* FMDatabase.m */; };
+		A465D24E1ADFACE7002CE071 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2431ADFACE6002CE071 /* FMDatabase.m */; };
+		A465D24F1ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2451ADFACE6002CE071 /* FMDatabaseAdditions.m */; };
+		A465D2501ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2451ADFACE6002CE071 /* FMDatabaseAdditions.m */; };
+		A465D2511ADFACE7002CE071 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2471ADFACE6002CE071 /* FMDatabasePool.m */; };
+		A465D2521ADFACE7002CE071 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2471ADFACE6002CE071 /* FMDatabasePool.m */; };
+		A465D2531ADFACE7002CE071 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2491ADFACE6002CE071 /* FMDatabaseQueue.m */; };
+		A465D2541ADFACE7002CE071 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2491ADFACE6002CE071 /* FMDatabaseQueue.m */; };
+		A465D2551ADFACE7002CE071 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D24C1ADFACE6002CE071 /* FMResultSet.m */; };
+		A465D2561ADFACE7002CE071 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D24C1ADFACE6002CE071 /* FMResultSet.m */; };
+		A465D2571ADFAD15002CE071 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B92872F183A300400AB69BB /* libsqlite3.dylib */; };
 		A4B6A4A01A230188000A3190 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49D1A230188000A3190 /* play.png */; };
 		A4B6A4A11A230188000A3190 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49E1A230188000A3190 /* record.png */; };
 		A4B6A4A21A230188000A3190 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49F1A230188000A3190 /* stop.png */; };
@@ -224,7 +247,35 @@
 			remoteGlobalIDString = 0B9A53CA1812274D0085FFD7;
 			remoteInfo = DaysInLine;
 		};
+		A465D21F1ADF7E8C002CE071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B9A53C31812274D0085FFD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A465D21C1ADF7E8C002CE071;
+			remoteInfo = "DaysInLine WatchKit App";
+		};
+		A465D2291ADF7E8D002CE071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B9A53C31812274D0085FFD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A465D2111ADF7E8C002CE071;
+			remoteInfo = "DaysInLine WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A465D2321ADF7E8D002CE071 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A465D22B1ADF7E8D002CE071 /* DaysInLine WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B00AC53187D849400427F35 /* collectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectCell.xib; sourceTree = "<group>"; };
@@ -454,6 +505,8 @@
 		0BFF71E918C7792C0011AFDE /* 标签.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签.png"; sourceTree = "<group>"; };
 		134E8AFC189CEC6700C2F805 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		134E8AFD189CEC6700C2F805 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		A41575391AE0E6B100619974 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		A415753A1AE0E6B100619974 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		A43800001A7F40A300515DD5 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
 		A43800011A7F40A300515DD5 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
 		A43800021A7F40A300515DD5 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
@@ -490,6 +543,33 @@
 		A438FFFD1A7F40A300515DD5 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		A438FFFE1A7F40A300515DD5 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
 		A438FFFF1A7F40A300515DD5 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		A465D2121ADF7E8C002CE071 /* DaysInLine WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DaysInLine WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A465D2151ADF7E8C002CE071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A465D2161ADF7E8C002CE071 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		A465D2171ADF7E8C002CE071 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		A465D2191ADF7E8C002CE071 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A465D21D1ADF7E8C002CE071 /* DaysInLine WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaysInLine WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A465D2231ADF7E8C002CE071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A465D2251ADF7E8C002CE071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A465D2271ADF7E8C002CE071 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A465D2341ADF936D002CE071 /* rowInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rowInterfaceController.h; sourceTree = "<group>"; };
+		A465D2351ADF936D002CE071 /* rowInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rowInterfaceController.m; sourceTree = "<group>"; };
+		A465D23B1ADFA492002CE071 /* MonthInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthInterfaceController.h; sourceTree = "<group>"; };
+		A465D23C1ADFA492002CE071 /* MonthInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthInterfaceController.m; sourceTree = "<group>"; };
+		A465D23E1ADFAC43002CE071 /* DaysInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysInterfaceController.h; sourceTree = "<group>"; };
+		A465D23F1ADFAC43002CE071 /* DaysInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysInterfaceController.m; sourceTree = "<group>"; };
+		A465D2421ADFACE6002CE071 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A465D2431ADFACE6002CE071 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A465D2441ADFACE6002CE071 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A465D2451ADFACE6002CE071 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A465D2461ADFACE6002CE071 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A465D2471ADFACE6002CE071 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A465D2481ADFACE6002CE071 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A465D2491ADFACE6002CE071 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A465D24A1ADFACE6002CE071 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A465D24B1ADFACE6002CE071 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A465D24C1ADFACE6002CE071 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A465D2581ADFAE67002CE071 /* DaysInLine WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DaysInLine WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		A4B6A49D1A230188000A3190 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = resources/play.png; sourceTree = "<group>"; };
 		A4B6A49E1A230188000A3190 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = resources/record.png; sourceTree = "<group>"; };
 		A4B6A49F1A230188000A3190 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = resources/stop.png; sourceTree = "<group>"; };
@@ -543,6 +623,14 @@
 				0B9A53EE1812274D0085FFD7 /* XCTest.framework in Frameworks */,
 				0B9A53F01812274D0085FFD7 /* UIKit.framework in Frameworks */,
 				0B9A53EF1812274D0085FFD7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D20F1ADF7E8C002CE071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D2571ADFAD15002CE071 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +810,7 @@
 				A4FFCE091A173E9500B16AE3 /* libMobClickLibrary.a */,
 				A438000E1A7F4C5C00515DD5 /* libBaiduMobAdSdk64bit.a */,
 				A4FFCE0A1A173E9500B16AE3 /* MobClick.h */,
+				A465D2411ADFACE6002CE071 /* fmdb */,
 				A438FFA81A7F3A4D00515DD5 /* baiduAd */,
 				0B1D39BE198537E3008196D3 /* category */,
 				0B1D394B1984DF82008196D3 /* shareSDK */,
@@ -729,6 +818,8 @@
 				134E8AFB189CEC6700C2F805 /* CustomIOS7AlertView */,
 				0B9A53D41812274D0085FFD7 /* DaysInLine */,
 				0B9A53F31812274D0085FFD7 /* DaysInLineTests */,
+				A465D2131ADF7E8C002CE071 /* DaysInLine WatchKit Extension */,
+				A465D2211ADF7E8C002CE071 /* DaysInLine WatchKit App */,
 				0B9A53CD1812274D0085FFD7 /* Frameworks */,
 				0B9A53CC1812274D0085FFD7 /* Products */,
 			);
@@ -739,6 +830,8 @@
 			children = (
 				0B9A53CB1812274D0085FFD7 /* DaysInLine.app */,
 				0B9A53EC1812274D0085FFD7 /* DaysInLineTests.xctest */,
+				A465D2121ADF7E8C002CE071 /* DaysInLine WatchKit Extension.appex */,
+				A465D21D1ADF7E8C002CE071 /* DaysInLine WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1020,6 +1113,70 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		A465D2131ADF7E8C002CE071 /* DaysInLine WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A465D2581ADFAE67002CE071 /* DaysInLine WatchKit Extension.entitlements */,
+				A41575391AE0E6B100619974 /* Event.h */,
+				A415753A1AE0E6B100619974 /* Event.m */,
+				A465D2161ADF7E8C002CE071 /* InterfaceController.h */,
+				A465D2171ADF7E8C002CE071 /* InterfaceController.m */,
+				A465D23B1ADFA492002CE071 /* MonthInterfaceController.h */,
+				A465D23C1ADFA492002CE071 /* MonthInterfaceController.m */,
+				A465D23E1ADFAC43002CE071 /* DaysInterfaceController.h */,
+				A465D23F1ADFAC43002CE071 /* DaysInterfaceController.m */,
+				A465D2341ADF936D002CE071 /* rowInterfaceController.h */,
+				A465D2351ADF936D002CE071 /* rowInterfaceController.m */,
+				A465D2191ADF7E8C002CE071 /* Images.xcassets */,
+				A465D2141ADF7E8C002CE071 /* Supporting Files */,
+			);
+			path = "DaysInLine WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A465D2141ADF7E8C002CE071 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A465D2151ADF7E8C002CE071 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A465D2211ADF7E8C002CE071 /* DaysInLine WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				A465D2241ADF7E8C002CE071 /* Interface.storyboard */,
+				A465D2271ADF7E8C002CE071 /* Images.xcassets */,
+				A465D2221ADF7E8C002CE071 /* Supporting Files */,
+			);
+			path = "DaysInLine WatchKit App";
+			sourceTree = "<group>";
+		};
+		A465D2221ADF7E8C002CE071 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A465D2231ADF7E8C002CE071 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A465D2411ADFACE6002CE071 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A465D2421ADFACE6002CE071 /* FMDatabase.h */,
+				A465D2431ADFACE6002CE071 /* FMDatabase.m */,
+				A465D2441ADFACE6002CE071 /* FMDatabaseAdditions.h */,
+				A465D2451ADFACE6002CE071 /* FMDatabaseAdditions.m */,
+				A465D2461ADFACE6002CE071 /* FMDatabasePool.h */,
+				A465D2471ADFACE6002CE071 /* FMDatabasePool.m */,
+				A465D2481ADFACE6002CE071 /* FMDatabaseQueue.h */,
+				A465D2491ADFACE6002CE071 /* FMDatabaseQueue.m */,
+				A465D24A1ADFACE6002CE071 /* FMDB.h */,
+				A465D24B1ADFACE6002CE071 /* FMResultSet.h */,
+				A465D24C1ADFACE6002CE071 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1030,10 +1187,12 @@
 				0B9A53C71812274D0085FFD7 /* Sources */,
 				0B9A53C81812274D0085FFD7 /* Frameworks */,
 				0B9A53C91812274D0085FFD7 /* Resources */,
+				A465D2321ADF7E8D002CE071 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A465D22A1ADF7E8D002CE071 /* PBXTargetDependency */,
 			);
 			name = DaysInLine;
 			productName = DaysInLine;
@@ -1058,6 +1217,39 @@
 			productReference = 0B9A53EC1812274D0085FFD7 /* DaysInLineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A465D2111ADF7E8C002CE071 /* DaysInLine WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A465D2311ADF7E8D002CE071 /* Build configuration list for PBXNativeTarget "DaysInLine WatchKit Extension" */;
+			buildPhases = (
+				A465D20E1ADF7E8C002CE071 /* Sources */,
+				A465D20F1ADF7E8C002CE071 /* Frameworks */,
+				A465D2101ADF7E8C002CE071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A465D2201ADF7E8C002CE071 /* PBXTargetDependency */,
+			);
+			name = "DaysInLine WatchKit Extension";
+			productName = "DaysInLine WatchKit Extension";
+			productReference = A465D2121ADF7E8C002CE071 /* DaysInLine WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		A465D21C1ADF7E8C002CE071 /* DaysInLine WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A465D2301ADF7E8D002CE071 /* Build configuration list for PBXNativeTarget "DaysInLine WatchKit App" */;
+			buildPhases = (
+				A465D21B1ADF7E8C002CE071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DaysInLine WatchKit App";
+			productName = "DaysInLine WatchKit App";
+			productReference = A465D21D1ADF7E8C002CE071 /* DaysInLine WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1070,6 +1262,9 @@
 					0B9A53CA1812274D0085FFD7 = {
 						DevelopmentTeam = DBBLJY69ER;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -1077,6 +1272,18 @@
 					};
 					0B9A53EB1812274D0085FFD7 = {
 						TestTargetID = 0B9A53CA1812274D0085FFD7;
+					};
+					A465D2111ADF7E8C002CE071 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = DBBLJY69ER;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A465D21C1ADF7E8C002CE071 = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
@@ -1098,6 +1305,8 @@
 			targets = (
 				0B9A53CA1812274D0085FFD7 /* DaysInLine */,
 				0B9A53EB1812274D0085FFD7 /* DaysInLineTests */,
+				A465D2111ADF7E8C002CE071 /* DaysInLine WatchKit Extension */,
+				A465D21C1ADF7E8C002CE071 /* DaysInLine WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -1259,6 +1468,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A465D2101ADF7E8C002CE071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D21E1ADF7E8C002CE071 /* DaysInLine WatchKit App.app in Resources */,
+				A465D21A1ADF7E8C002CE071 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D21B1ADF7E8C002CE071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D23A1ADFA1C2002CE071 /* text.png in Resources */,
+				A465D2331ADF9179002CE071 /* backgroundHome.png in Resources */,
+				A465D2261ADF7E8C002CE071 /* Interface.storyboard in Resources */,
+				A465D2281ADF7E8C002CE071 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1269,8 +1498,10 @@
 				0BFC22D718D2995300C9B4C5 /* contractView.m in Sources */,
 				0B02149418D86CBF00FF3AAC /* daylineView.m in Sources */,
 				0B929ED118154B94008E1726 /* buttonInScroll.m in Sources */,
+				A465D24D1ADFACE7002CE071 /* FMDatabase.m in Sources */,
 				A438FFF51A7F3FBD00515DD5 /* CJSONSerializer.m in Sources */,
 				0B9A53E51812274D0085FFD7 /* ViewController.m in Sources */,
+				A465D24F1ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */,
 				0BA18F6D187C41B700ADBB01 /* collectionView.m in Sources */,
 				134E8AFE189CEC6700C2F805 /* CustomIOS7AlertView.m in Sources */,
 				0B942F861896720A002864B8 /* statisticViewController.m in Sources */,
@@ -1278,13 +1509,16 @@
 				A438000B1A7F40A300515DD5 /* ZipArchive.mm in Sources */,
 				0B1D39C119853812008196D3 /* UIImage+image_scale.m in Sources */,
 				0BD3427E19F9398C0074A74C /* CustomActionSheet.m in Sources */,
+				A465D2551ADFACE7002CE071 /* FMResultSet.m in Sources */,
 				A43800151A7F51A500515DD5 /* mongoose.c in Sources */,
 				0B9A53DF1812274D0085FFD7 /* AppDelegate.m in Sources */,
 				A43800091A7F40A300515DD5 /* unzip.c in Sources */,
+				A465D2531ADFACE7002CE071 /* FMDatabaseQueue.m in Sources */,
 				0B25F89218BA3ACD0025B0CB /* settingView.m in Sources */,
 				0BF9EF7D18BB8A9400F38370 /* SevenSwitch.m in Sources */,
 				A438FFF41A7F3FBD00515DD5 /* CJSONDeserializer.m in Sources */,
 				A438FFF61A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m in Sources */,
+				A465D2511ADFACE7002CE071 /* FMDatabasePool.m in Sources */,
 				A43800071A7F40A300515DD5 /* ioapi.c in Sources */,
 				A43800081A7F40A300515DD5 /* mztools.c in Sources */,
 				0B9A53DB1812274D0085FFD7 /* main.m in Sources */,
@@ -1312,6 +1546,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A465D20E1ADF7E8C002CE071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D23D1ADFA492002CE071 /* MonthInterfaceController.m in Sources */,
+				A465D2541ADFACE7002CE071 /* FMDatabaseQueue.m in Sources */,
+				A415753B1AE0E6B100619974 /* Event.m in Sources */,
+				A465D2361ADF936D002CE071 /* rowInterfaceController.m in Sources */,
+				A465D2401ADFAC43002CE071 /* DaysInterfaceController.m in Sources */,
+				A465D24E1ADFACE7002CE071 /* FMDatabase.m in Sources */,
+				A465D2521ADFACE7002CE071 /* FMDatabasePool.m in Sources */,
+				A465D2561ADFACE7002CE071 /* FMResultSet.m in Sources */,
+				A465D2181ADF7E8C002CE071 /* InterfaceController.m in Sources */,
+				A465D2501ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1319,6 +1570,16 @@
 			isa = PBXTargetDependency;
 			target = 0B9A53CA1812274D0085FFD7 /* DaysInLine */;
 			targetProxy = 0B9A53F11812274D0085FFD7 /* PBXContainerItemProxy */;
+		};
+		A465D2201ADF7E8C002CE071 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A465D21C1ADF7E8C002CE071 /* DaysInLine WatchKit App */;
+			targetProxy = A465D21F1ADF7E8C002CE071 /* PBXContainerItemProxy */;
+		};
+		A465D22A1ADF7E8D002CE071 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A465D2111ADF7E8C002CE071 /* DaysInLine WatchKit Extension */;
+			targetProxy = A465D2291ADF7E8D002CE071 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1371,6 +1632,14 @@
 				0BC09F321930D2BD00C12D89 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A465D2241ADF7E8C002CE071 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A465D2251ADF7E8C002CE071 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1460,8 +1729,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DaysInLine/DaysInLine.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: CAO GUANGXU (DBBLJY69ER)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CAO GUANGXU (DBBLJY69ER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1484,7 +1753,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ac6c7311-98b0-4c6e-a576-447dc54d2604";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1498,8 +1767,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DaysInLine/DaysInLine.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: CAO GUANGXU (DBBLJY69ER)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CAO GUANGXU (DBBLJY69ER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1517,7 +1786,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "66B75D46-6F9B-4B42-9792-EAAAA459F547";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1566,6 +1835,104 @@
 			};
 			name = Release;
 		};
+		A465D22C1ADF7E8D002CE071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "DaysInLine WatchKit Extension/DaysInLine WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DaysInLine WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A465D22D1ADF7E8D002CE071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "DaysInLine WatchKit Extension/DaysInLine WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DaysInLine WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A465D22E1ADF7E8D002CE071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = DaysInLine_WatchKit_Extension;
+				INFOPLIST_FILE = "DaysInLine WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		A465D22F1ADF7E8D002CE071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = DaysInLine_WatchKit_Extension;
+				INFOPLIST_FILE = "DaysInLine WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1592,6 +1959,24 @@
 			buildConfigurations = (
 				0B9A54011812274D0085FFD7 /* Debug */,
 				0B9A54021812274D0085FFD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A465D2301ADF7E8D002CE071 /* Build configuration list for PBXNativeTarget "DaysInLine WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A465D22E1ADF7E8D002CE071 /* Debug */,
+				A465D22F1ADF7E8D002CE071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A465D2311ADF7E8D002CE071 /* Build configuration list for PBXNativeTarget "DaysInLine WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A465D22C1ADF7E8D002CE071 /* Debug */,
+				A465D22D1ADF7E8D002CE071 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

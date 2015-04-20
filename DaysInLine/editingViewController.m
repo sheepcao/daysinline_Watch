@@ -51,13 +51,10 @@ int recorderID;
 - (void)viewDidLoad
 {
     
-    NSString *docsDir;
-    NSArray *dirPaths;
+    NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
+    NSString *docsPath = [storeURL absoluteString];
     
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    self.databasePath = [[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent:@"info.sqlite"]];
+    self.databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){

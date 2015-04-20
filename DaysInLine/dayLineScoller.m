@@ -169,13 +169,20 @@ UILabel *labelTime[NR_TIME_LABEL];
 -(UIImage *)getContentImage
 {
     
-    UIGraphicsBeginImageContext(self.viewToShare.frame.size);
     
-    
-    //获取图像
-    [ self.viewToShare.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    UIGraphicsBeginImageContext(self.viewToShare.frame.size);
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(self.viewToShare.frame.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(self.viewToShare.frame.size);
+    [self.viewToShare.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+//    //获取图像
+//    [ self.viewToShare.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
     return image;
     
 }
