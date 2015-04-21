@@ -233,6 +233,7 @@
 		A4B6A4A01A230188000A3190 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49D1A230188000A3190 /* play.png */; };
 		A4B6A4A11A230188000A3190 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49E1A230188000A3190 /* record.png */; };
 		A4B6A4A21A230188000A3190 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B6A49F1A230188000A3190 /* stop.png */; };
+		A4CF989F1AE4D37C00B599DC /* dayLineInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CF989E1AE4D37C00B599DC /* dayLineInterfaceController.m */; };
 		A4FFCDE41A173CBA00B16AE3 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FFCDE31A173CBA00B16AE3 /* EventKit.framework */; };
 		A4FFCDE61A173CBF00B16AE3 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FFCDE51A173CBF00B16AE3 /* EventKitUI.framework */; };
 		A4FFCE0B1A173E9500B16AE3 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FFCE091A173E9500B16AE3 /* libMobClickLibrary.a */; };
@@ -570,9 +571,13 @@
 		A465D24B1ADFACE6002CE071 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		A465D24C1ADFACE6002CE071 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		A465D2581ADFAE67002CE071 /* DaysInLine WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DaysInLine WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		A47EF4F41AE5E89D005C32E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		A47EF4F61AE5E89E005C32E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		A4B6A49D1A230188000A3190 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = resources/play.png; sourceTree = "<group>"; };
 		A4B6A49E1A230188000A3190 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = resources/record.png; sourceTree = "<group>"; };
 		A4B6A49F1A230188000A3190 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = resources/stop.png; sourceTree = "<group>"; };
+		A4CF989D1AE4D37C00B599DC /* dayLineInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dayLineInterfaceController.h; sourceTree = "<group>"; };
+		A4CF989E1AE4D37C00B599DC /* dayLineInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dayLineInterfaceController.m; sourceTree = "<group>"; };
 		A4FFCDE31A173CBA00B16AE3 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		A4FFCDE51A173CBF00B16AE3 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		A4FFCE091A173E9500B16AE3 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
@@ -1125,6 +1130,8 @@
 				A465D23C1ADFA492002CE071 /* MonthInterfaceController.m */,
 				A465D23E1ADFAC43002CE071 /* DaysInterfaceController.h */,
 				A465D23F1ADFAC43002CE071 /* DaysInterfaceController.m */,
+				A4CF989D1AE4D37C00B599DC /* dayLineInterfaceController.h */,
+				A4CF989E1AE4D37C00B599DC /* dayLineInterfaceController.m */,
 				A465D2341ADF936D002CE071 /* rowInterfaceController.h */,
 				A465D2351ADF936D002CE071 /* rowInterfaceController.m */,
 				A465D2191ADF7E8C002CE071 /* Images.xcassets */,
@@ -1559,6 +1566,7 @@
 				A465D2521ADFACE7002CE071 /* FMDatabasePool.m in Sources */,
 				A465D2561ADFACE7002CE071 /* FMResultSet.m in Sources */,
 				A465D2181ADF7E8C002CE071 /* InterfaceController.m in Sources */,
+				A4CF989F1AE4D37C00B599DC /* dayLineInterfaceController.m in Sources */,
 				A465D2501ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1638,6 +1646,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A465D2251ADF7E8C002CE071 /* Base */,
+				A47EF4F41AE5E89D005C32E0 /* zh-Hans */,
+				A47EF4F61AE5E89E005C32E0 /* en */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

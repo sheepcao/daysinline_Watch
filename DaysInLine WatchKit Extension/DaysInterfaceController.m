@@ -18,6 +18,7 @@
 
 @property (nonatomic,strong) NSMutableArray *allDates;
 @property (nonatomic,strong) NSMutableArray *datesInMonth;
+@property (nonatomic ,strong) NSArray *MonthArray;
 
 @end
 
@@ -27,9 +28,17 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
+    self.MonthArray =@[@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
+
     currentMon = [context intValue];
-    [self setTitle:[NSString stringWithFormat:@"%@月",context]];
-    
+
+    if([[self currentLanguage] compare:@"zh-Hans" options:NSCaseInsensitiveSearch]==NSOrderedSame || [[self currentLanguage] compare:@"zh-Hant" options:NSCaseInsensitiveSearch]==NSOrderedSame)
+    {
+        [self setTitle:[NSString stringWithFormat:@"%@月",context]];
+    }else
+    {
+        [self setTitle:self.MonthArray[currentMon-1]];
+    }
 
     [self loadDB];
     [self pickDatesOnThisMonth];
@@ -50,14 +59,23 @@
     [super didDeactivate];
 }
 
-
+- (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
+    
+    [self pushControllerWithName:@"dayLineInterfaceController" context:self.datesInMonth[rowIndex]];
+}
 
 - (void)loadTableRows {
     
-    
     [self.datesTable setNumberOfRows:self.datesInMonth.count withRowType:@"defaultRow"];
     
-    [self.backGroup setHeight:37*self.datesInMonth.count];
+    [self.tableGroup setHeight:(37+3)*self.datesInMonth.count];
+    [self.backGroup setHeight:(37+3)*self.datesInMonth.count + 40];
+    
+    if (self.datesInMonth.count<4) {
+        [self.tableGroup setHeight:130];
+        [self.backGroup setHeight:150];
+    }
+
     
     // Create all of the table rows.
     for (int i = 0; i<self.datesInMonth.count ; i++) {
@@ -77,7 +95,7 @@
 {
     
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
+    NSString *docsPath = [storeURL path];
     NSString *dbPath = [docsPath stringByAppendingPathComponent:@"info.sqlite"];
     
     db = [FMDatabase databaseWithPath:dbPath];
@@ -124,6 +142,13 @@
     
 }
 
+-(NSString*)currentLanguage
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *languages = [defaults objectForKey:@"AppleLanguages"];
+    NSString *currentLang = [languages objectAtIndex:0];
+    return currentLang;
+}
 @end
 
 

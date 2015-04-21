@@ -241,7 +241,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
 
     
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
+    NSString *docsPath = [storeURL path];
     
     databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     
@@ -548,21 +548,33 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     times++;
     
 
+    if (times>1)
+    {
+        [self saveScreenshotForWatch];
+    }
+
+    
+    
+
+    
+}
+
+-(void)saveScreenshotForWatch
+{
     [self shareTappedWithActionSheet:nil];
     
-    
-    
-    
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
-    NSString *dayImagePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:modifyDate]];
+    NSString *docsPath = [storeURL path];
     
-
-
+    NSString *myImageName = [NSString stringWithFormat:@"%@@2x.png",modifyDate];
+    NSString *dayImagePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:myImageName]];
+    
+    
+    NSLog(@"image Path:%@",dayImagePath);
     
     
     NSError *error;
-
+    
     NSFileManager *fileManager =[NSFileManager defaultManager];
     if([fileManager fileExistsAtPath:dayImagePath] == YES)
     {
@@ -573,11 +585,11 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
         
     }
     
-        
-    NSData *imageData = UIImagePNGRepresentation(self.shareImg);
-    [imageData writeToFile:dayImagePath atomically:NO];
-
     
+    NSData *imageData = UIImagePNGRepresentation(self.shareImg);
+    BOOL success = [imageData writeToFile:dayImagePath atomically:NO];
+    NSLog(@"save image success:%d",success);
+
 }
 
 -(void) viewDidDisappear:(BOOL)animated
@@ -597,17 +609,10 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
 
 -(void)todayTapped
 {
-    //[[Frontia getStatistics] logEvent:@"10015" eventLabel:@"todayTap"];
 
     [self.my_select dismissKeyboard];
     
-    
-    
-    
-    //play sound
-     //播放
-    
-    
+
     
     if (soundSwitch) {
         
@@ -725,9 +730,6 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
     
     
-    
-    // self.my_scoller = [[dayLineScoller alloc] initWithFrame:CGRectMake(1,110, self.view.frame.size.width-86.3, self.view.bounds.size.height-220)];
-    
     self.my_dayline.my_scoller.modifyEvent_delegate = self;
     self.drawBtnDelegate = self.my_dayline.my_scoller;
     
@@ -771,28 +773,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
                 }
                 
             }
-            /*
-             else {
-             // 插入当天的数据
-             NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO DAYTABLE(DATE,mood,growth) VALUES(?,?,?)"];
-             
-             //    NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO DAYTABLE(DATE) VALUES(\"%@\",\"%d\")",today,9];
-             const char *insertsatement = [insertSql UTF8String];
-             sqlite3_prepare_v2(dataBase, insertsatement, -1, &statement, NULL);
-             sqlite3_bind_text(statement, 1, [modifyDate UTF8String], -1, SQLITE_TRANSIENT);
-             sqlite3_bind_int(statement, 2, 0);
-             sqlite3_bind_int(statement, 3, 0);
-             
-             
-             if (sqlite3_step(statement)==SQLITE_DONE) {
-             NSLog(@"innsert today ok");
-             }
-             else {
-             NSLog(@"Error while insert:%s",sqlite3_errmsg(dataBase));
-             }
-             
-             }
-             */
+
             
         }
         else{
@@ -846,16 +827,20 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
             }
             
             sqlite3_finalize(statement);
+        
+        
+        //eric:for watch
+        [self saveScreenshotForWatch];
+        
        
-    }
-    
-    
-    
-    else {
+    }else {
         NSLog(@"数据库打开失败");
         
     }
     sqlite3_close(dataBase);
+    
+    
+    
     
     
 }
@@ -995,6 +980,14 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
     sqlite3_close(dataBase);
     
+//    
+//    
+//    UIImageView *test = [[UIImageView alloc] initWithFrame:self.view.frame];
+//    test.image = self.shareImg;
+//    
+//    [self.view addSubview:test];
+//    
+    
 }
 
 /*
@@ -1071,7 +1064,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
         test.contentMode = UIViewContentModeScaleToFill;
         test.frame = CGRectMake(0, LABEL_SPACE, self.my_dayline.my_scoller.viewToShare.frame.size.width, self.my_dayline.my_scoller.viewToShare.frame.size.height);
         [self.finalShare addSubview:test];
-
+        
     }else
     {
         self.finalShare = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.my_selectDay.my_scoller.viewToShare.frame.size.width,self.my_selectDay.my_scoller.viewToShare.frame.size.height+LABEL_SPACE)];
@@ -1082,6 +1075,7 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
         
         [self.finalShare addSubview:test];
     }
+    
     
 //    self.finalShare = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.my_dayline.my_scoller.viewToShare.frame.size.width,self.my_dayline.my_scoller.viewToShare.frame.size.height+LABEL_SPACE)];
 //    
@@ -1119,35 +1113,44 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
     
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(self.finalShare.frame.size, NO, [UIScreen mainScreen].scale);
+        UIGraphicsBeginImageContextWithOptions(self.finalShare.frame.size, NO, 2.0);
     else
         UIGraphicsBeginImageContext(self.finalShare.frame.size);
     [self.finalShare.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    self.shareImg = [self halfCutShareImg:image];
+    self.shareImg = [self halfCutShareImg:image andButton:button];
 
     
 
 }
 
--(UIImage *)halfCutShareImg:(UIImage *)longImg
+-(UIImage *)halfCutShareImg:(UIImage *)longImg andButton:btn
 {
+    int offsideForWatch = 0;
+    int scaleForRetina = 1;
+    if (!btn) {
+        offsideForWatch = 65;
+    }
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+    {
+        scaleForRetina = 2;
+    }
     
-    UIImage *firstImg = [longImg getSubImage:CGRectMake(0, 0, 245, 1230/4)];
-    UIImage *secondImg = [longImg getSubImage:CGRectMake(0, 1230/4, 245, 1230/4)];
-    UIImage *thirdImg = [longImg getSubImage:CGRectMake(0, 1230/2, 245, 1230/4)];
-    UIImage *fourthImg = [longImg getSubImage:CGRectMake(0, 1230*3/4, 245, 1230/4+20)];
+    UIImage *firstImg = [longImg getSubImage:CGRectMake(0, 0, 245*scaleForRetina, 1230*scaleForRetina/4)];
+    UIImage *secondImg = [longImg getSubImage:CGRectMake(0, 1230*scaleForRetina/4, 245*scaleForRetina, 1230*scaleForRetina/4)];
+    UIImage *thirdImg = [longImg getSubImage:CGRectMake(0, 1230*scaleForRetina/2, 245*scaleForRetina, 1230*scaleForRetina/4)];
+    UIImage *fourthImg = [longImg getSubImage:CGRectMake(0, 1230*3*scaleForRetina/4, 245*scaleForRetina, 1230*scaleForRetina/4+20)];
     UIImageView *first = [[UIImageView alloc] initWithImage:firstImg];
-    first.frame = CGRectMake(40, 70, 245, 1230/4);
+    first.frame = CGRectMake(40, 70-offsideForWatch, 245, 1230/4);
     UIImageView *second = [[UIImageView alloc] initWithImage:secondImg];
-    second.frame = CGRectMake(40, 70+1230/4, 245, 1230/4);
+    second.frame = CGRectMake(40, 70+1230/4-offsideForWatch, 245, 1230/4);
     
     UIImageView *third = [[UIImageView alloc] initWithImage:thirdImg];
-    third.frame = CGRectMake(40, 70+1230/2, 245, 1230/4);
+    third.frame = CGRectMake(40, 70+1230/2-offsideForWatch, 245, 1230/4);
     UIImageView *fourth = [[UIImageView alloc] initWithImage:fourthImg];
-    fourth.frame = CGRectMake(40, 70+1230*3/4, 245, 1230/4+20);
+    fourth.frame = CGRectMake(40, 70+1230*3/4-offsideForWatch, 245, 1230/4+20);
     
     
     UIImageView *shareTitle = [[UIImageView alloc] initWithFrame:CGRectMake(0, 7, 320, 63)];
@@ -1159,17 +1162,18 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     [wholeView addSubview:second];
     [wholeView addSubview:third];
     [wholeView addSubview:fourth];
-    [wholeView addSubview:shareTitle];
-    
+
+    if(btn)
+    {
+        [wholeView addSubview:shareTitle];
+    }
     
     
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(wholeView.frame.size, NO, [UIScreen mainScreen].scale);
+        UIGraphicsBeginImageContextWithOptions(wholeView.frame.size, NO, 2.0);
     else
         UIGraphicsBeginImageContext(wholeView.frame.size);
 
-    
-//    UIGraphicsBeginImageContext(wholeView.frame.size);
     [wholeView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *entireOne = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -1500,6 +1504,8 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
             
             sqlite3_finalize(statement);
             
+            
+            [self saveScreenshotForWatch];
             
         }
         

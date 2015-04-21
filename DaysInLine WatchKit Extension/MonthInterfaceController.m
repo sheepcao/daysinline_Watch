@@ -11,12 +11,18 @@
 
 @interface MonthInterfaceController ()
 
+
+@property (nonatomic ,strong) NSArray *MonthArray;
+
 @end
 
 @implementation MonthInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    
+    self.MonthArray =@[@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
+    
     [self loadTableRows];
 
     // Configure interface objects here.
@@ -34,8 +40,14 @@
 }
 
 - (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
-    
-    [self pushControllerWithName:@"DaysInterfaceController" context:[NSNumber numberWithInteger:(rowIndex+1)]];
+//    
+//    if([[self currentLanguage] compare:@"zh-Hans" options:NSCaseInsensitiveSearch]==NSOrderedSame || [[self currentLanguage] compare:@"zh-Hant" options:NSCaseInsensitiveSearch]==NSOrderedSame)
+//    {
+        [self pushControllerWithName:@"DaysInterfaceController" context:[NSNumber numberWithInteger:(rowIndex+1)]];
+//    }else
+//    {
+//        [self pushControllerWithName:@"DaysInterfaceController" context:self.MonthArray[rowIndex]];
+//    }
 }
 
 - (void)loadTableRows {
@@ -50,11 +62,23 @@
    
         rowInterfaceController *elementRow = [self.monthTable rowControllerAtIndex:i];
         
-        [elementRow.rowTitle setText:[NSString stringWithFormat:@"%d月",i+1]];
+        if([[self currentLanguage] compare:@"zh-Hans" options:NSCaseInsensitiveSearch]==NSOrderedSame || [[self currentLanguage] compare:@"zh-Hant" options:NSCaseInsensitiveSearch]==NSOrderedSame)
+        {
+            [elementRow.rowTitle setText:[NSString stringWithFormat:@"%d月",i+1]];
+        }else
+        {
+            [elementRow.rowTitle setText:self.MonthArray[i]];
+        }
      }
 }
 
-
+-(NSString*)currentLanguage
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *languages = [defaults objectForKey:@"AppleLanguages"];
+    NSString *currentLang = [languages objectAtIndex:0];
+    return currentLang;
+}
 @end
 
 

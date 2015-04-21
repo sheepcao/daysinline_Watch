@@ -53,7 +53,7 @@
 -(void)initDB
 {
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
+    NSString *docsPath = [storeURL path];
     NSString *dbPath = [docsPath stringByAppendingPathComponent:@"info.sqlite"];
     
     db = [FMDatabase databaseWithPath:dbPath];

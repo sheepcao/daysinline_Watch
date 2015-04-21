@@ -51,7 +51,7 @@
                                                 <tableRow identifier="defaultRow" id="TUp-Ae-Ro4" customClass="rowInterfaceController">
                                                     <group key="rootItem" width="1" alignment="left" backgroundImage="text.png" id="m5Y-VS-gLl">
                                                         <items>
-                                                            <label alignment="center" verticalAlignment="center" text="1月" id="oPp-g0-4DJ">
+                                                            <label width="60" alignment="center" verticalAlignment="center" text="1月" textAlignment="center" id="oPp-g0-4DJ">
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="font" type="system" weight="thin" pointSize="17"/>
                                                             </label>
@@ -74,18 +74,18 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="585" y="236"/>
+            <point key="canvasLocation" x="585" y="235.5"/>
         </scene>
         <!--DaysInterfaceController-->
         <scene sceneID="XCx-bG-ye1">
             <objects>
                 <controller identifier="DaysInterfaceController" id="Gcs-bP-fld" customClass="DaysInterfaceController">
                     <items>
-                        <group width="1" height="151" alignment="left" backgroundImage="backgroundHome.png" id="Qbx-cu-udu">
+                        <group width="1" height="151" alignment="left" backgroundImage="backgroundHome.png" radius="0.0" id="Qbx-cu-udu">
                             <items>
-                                <group width="0.81000000000000005" height="130" alignment="right" verticalAlignment="center" id="ah9-Lv-3gI">
+                                <group width="0.81000000000000005" height="130" alignment="right" verticalAlignment="center" radius="6" id="ah9-Lv-3gI">
                                     <items>
-                                        <table alignment="left" id="Kz3-97-Qpy">
+                                        <table alignment="left" verticalAlignment="center" id="Kz3-97-Qpy">
                                             <items>
                                                 <tableRow identifier="defaultRow" id="lNM-G8-JXe" customClass="rowInterfaceController">
                                                     <group key="rootItem" width="1" height="37" alignment="left" backgroundImage="text.png" id="lSK-2b-mpI">
@@ -115,6 +115,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="764" y="36"/>
+        </scene>
+        <!--日线图-->
+        <scene sceneID="yvk-zR-UND">
+            <objects>
+                <controller identifier="dayLineInterfaceController" title="日线图" id="ATt-Kl-xxQ" customClass="dayLineInterfaceController">
+                    <items>
+                        <imageView width="1" height="790" alignment="center" verticalAlignment="center" id="Ppb-3P-RQQ"/>
+                    </items>
+                    <connections>
+                        <outlet property="dayImage" destination="Ppb-3P-RQQ" id="jCe-dz-jEY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="957" y="116.5"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.4607928241" green="0.55760995369999999" blue="0.77167245370000004" alpha="1" colorSpace="calibratedRGB"/>

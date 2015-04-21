@@ -16,8 +16,9 @@
     CGRect smallBounds = CGRectMake(0, 0, CGImageGetWidth(subImageRef), CGImageGetHeight(subImageRef));
     
 //    UIGraphicsBeginImageContext(smallBounds.size);
+   
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(smallBounds.size, NO, [UIScreen mainScreen].scale);
+        UIGraphicsBeginImageContextWithOptions(smallBounds.size, NO, 2.0);
     else
         UIGraphicsBeginImageContext(smallBounds.size);
     
@@ -57,7 +58,7 @@
     // 创建一个bitmap的context
     // 并把它设置成为当前正在使用的context
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+        UIGraphicsBeginImageContextWithOptions(size, NO, 1.0/*,[UIScreen mainScreen].scale*/);
     else
         UIGraphicsBeginImageContext(size);
 //    UIGraphicsBeginImageContext(size);

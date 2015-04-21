@@ -663,7 +663,7 @@
 + (UIImage *)_imageNamed:(NSString *)name withColor:(UIColor *)color {
     UIImage *img = [UIImage imageNamed:name];
 
-    UIGraphicsBeginImageContextWithOptions(img.size, NO, [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(img.size, NO, 1.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [color setFill];
 

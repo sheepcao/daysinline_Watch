@@ -91,7 +91,7 @@ double expendAll;
     [my_result.continueButton addTarget:self action:@selector(continueButton:) forControlEvents:UIControlEventTouchUpInside];
     //创建或打开数据库
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
+    NSString *docsPath = [storeURL path];
     
     databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     

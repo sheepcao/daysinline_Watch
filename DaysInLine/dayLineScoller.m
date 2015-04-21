@@ -172,7 +172,7 @@ UILabel *labelTime[NR_TIME_LABEL];
     
 //    UIGraphicsBeginImageContext(self.viewToShare.frame.size);
     if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(self.viewToShare.frame.size, NO, [UIScreen mainScreen].scale);
+        UIGraphicsBeginImageContextWithOptions(self.viewToShare.frame.size, NO, 2.0);
     else
         UIGraphicsBeginImageContext(self.viewToShare.frame.size);
     [self.viewToShare.layer renderInContext:UIGraphicsGetCurrentContext()];

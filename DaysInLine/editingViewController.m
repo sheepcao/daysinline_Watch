@@ -52,7 +52,7 @@ int recorderID;
 {
     
     NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.sheepcao.DaysInLine"];
-    NSString *docsPath = [storeURL absoluteString];
+    NSString *docsPath = [storeURL path];
     
     self.databasePath = [[NSString alloc] initWithString:[docsPath stringByAppendingPathComponent:@"info.sqlite"]];
     
