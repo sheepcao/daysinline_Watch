@@ -191,23 +191,12 @@
 		0BFF71EA18C7792C0011AFDE /* 标签.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF71E918C7792C0011AFDE /* 标签.png */; };
 		134E8AFE189CEC6700C2F805 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134E8AFD189CEC6700C2F805 /* CustomIOS7AlertView.m */; };
 		A415753B1AE0E6B100619974 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A415753A1AE0E6B100619974 /* Event.m */; };
-		A43800071A7F40A300515DD5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A438FFFD1A7F40A300515DD5 /* ioapi.c */; };
-		A43800081A7F40A300515DD5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A438FFFF1A7F40A300515DD5 /* mztools.c */; };
-		A43800091A7F40A300515DD5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A43800011A7F40A300515DD5 /* unzip.c */; };
-		A438000A1A7F40A300515DD5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = A43800031A7F40A300515DD5 /* zip.c */; };
-		A438000B1A7F40A300515DD5 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = A43800061A7F40A300515DD5 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A438000D1A7F48DB00515DD5 /* libBaiduMobAdSdk64bit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A438000C1A7F48DB00515DD5 /* libBaiduMobAdSdk64bit.a */; };
 		A438000F1A7F4C5C00515DD5 /* libBaiduMobAdSdk64bit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A438000E1A7F4C5C00515DD5 /* libBaiduMobAdSdk64bit.a */; };
 		A43800111A7F507400515DD5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43800101A7F507400515DD5 /* CoreVideo.framework */; };
-		A43800151A7F51A500515DD5 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = A43800131A7F51A500515DD5 /* mongoose.c */; };
-		A438FFA01A7F39F300515DD5 /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A438FF9F1A7F39F300515DD5 /* baidumobadsdk.bundle */; };
-		A438FFD61A7F3A9800515DD5 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFAE1A7F3A9800515DD5 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A438FFE71A7F3B6B00515DD5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A438FFE61A7F3B6B00515DD5 /* Security.framework */; };
 		A438FFE91A7F3B8E00515DD5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A438FFE81A7F3B8E00515DD5 /* CoreMotion.framework */; };
 		A438FFEB1A7F3B9800515DD5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A438FFEA1A7F3B9700515DD5 /* MediaPlayer.framework */; };
-		A438FFF41A7F3FBD00515DD5 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFEE1A7F3FBD00515DD5 /* CJSONDeserializer.m */; };
-		A438FFF51A7F3FBD00515DD5 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFF01A7F3FBD00515DD5 /* CJSONSerializer.m */; };
-		A438FFF61A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A438FFF31A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m */; };
 		A465D2181ADF7E8C002CE071 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465D2171ADF7E8C002CE071 /* InterfaceController.m */; };
 		A465D21A1ADF7E8C002CE071 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465D2191ADF7E8C002CE071 /* Images.xcassets */; };
 		A465D21E1ADF7E8C002CE071 /* DaysInLine WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A465D21D1ADF7E8C002CE071 /* DaysInLine WatchKit App.app */; };
@@ -508,42 +497,12 @@
 		134E8AFD189CEC6700C2F805 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		A41575391AE0E6B100619974 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		A415753A1AE0E6B100619974 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		A43800001A7F40A300515DD5 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		A43800011A7F40A300515DD5 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		A43800021A7F40A300515DD5 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		A43800031A7F40A300515DD5 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		A43800041A7F40A300515DD5 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		A43800051A7F40A300515DD5 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
-		A43800061A7F40A300515DD5 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		A438000C1A7F48DB00515DD5 /* libBaiduMobAdSdk64bit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobAdSdk64bit.a; sourceTree = "<group>"; };
 		A438000E1A7F4C5C00515DD5 /* libBaiduMobAdSdk64bit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobAdSdk64bit.a; sourceTree = "<group>"; };
 		A43800101A7F507400515DD5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		A43800131A7F51A500515DD5 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
-		A43800141A7F51A500515DD5 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
-		A438FF9F1A7F39F300515DD5 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
-		A438FFA11A7F3A4700515DD5 /* BaiduMobAdCommonConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdCommonConfig.h; sourceTree = "<group>"; };
-		A438FFA21A7F3A4700515DD5 /* BaiduMobAdDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdDelegateProtocol.h; sourceTree = "<group>"; };
-		A438FFA31A7F3A4700515DD5 /* BaiduMobAdInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdInterstitial.h; sourceTree = "<group>"; };
-		A438FFA41A7F3A4700515DD5 /* BaiduMobAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdInterstitialDelegate.h; sourceTree = "<group>"; };
-		A438FFA51A7F3A4700515DD5 /* BaiduMobAdSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdSplash.h; sourceTree = "<group>"; };
-		A438FFA61A7F3A4700515DD5 /* BaiduMobAdSplashDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdSplashDelegate.h; sourceTree = "<group>"; };
-		A438FFA71A7F3A4700515DD5 /* BaiduMobAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdView.h; sourceTree = "<group>"; };
-		A438FFAD1A7F3A9800515DD5 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		A438FFAE1A7F3A9800515DD5 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		A438FFE61A7F3B6B00515DD5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A438FFE81A7F3B8E00515DD5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		A438FFEA1A7F3B9700515DD5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		A438FFED1A7F3FBD00515DD5 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		A438FFEE1A7F3FBD00515DD5 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		A438FFEF1A7F3FBD00515DD5 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		A438FFF01A7F3FBD00515DD5 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		A438FFF11A7F3FBD00515DD5 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
-		A438FFF21A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		A438FFF31A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		A438FFFC1A7F40A300515DD5 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		A438FFFD1A7F40A300515DD5 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		A438FFFE1A7F40A300515DD5 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		A438FFFF1A7F40A300515DD5 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
 		A465D2121ADF7E8C002CE071 /* DaysInLine WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DaysInLine WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A465D2151ADF7E8C002CE071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A465D2161ADF7E8C002CE071 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
@@ -816,7 +775,6 @@
 				A438000E1A7F4C5C00515DD5 /* libBaiduMobAdSdk64bit.a */,
 				A4FFCE0A1A173E9500B16AE3 /* MobClick.h */,
 				A465D2411ADFACE6002CE071 /* fmdb */,
-				A438FFA81A7F3A4D00515DD5 /* baiduAd */,
 				0B1D39BE198537E3008196D3 /* category */,
 				0B1D394B1984DF82008196D3 /* shareSDK */,
 				0BFD27F218BCE65A0016BCE4 /* libs */,
@@ -1039,83 +997,6 @@
 			);
 			name = CustomIOS7AlertView;
 			path = View;
-			sourceTree = "<group>";
-		};
-		A43800121A7F51A400515DD5 /* Mongoose */ = {
-			isa = PBXGroup;
-			children = (
-				A43800131A7F51A500515DD5 /* mongoose.c */,
-				A43800141A7F51A500515DD5 /* mongoose.h */,
-			);
-			path = Mongoose;
-			sourceTree = "<group>";
-		};
-		A438FFA81A7F3A4D00515DD5 /* baiduAd */ = {
-			isa = PBXGroup;
-			children = (
-				A438FF9F1A7F39F300515DD5 /* baidumobadsdk.bundle */,
-				A438FFA11A7F3A4700515DD5 /* BaiduMobAdCommonConfig.h */,
-				A438FFA21A7F3A4700515DD5 /* BaiduMobAdDelegateProtocol.h */,
-				A438FFA31A7F3A4700515DD5 /* BaiduMobAdInterstitial.h */,
-				A438FFA41A7F3A4700515DD5 /* BaiduMobAdInterstitialDelegate.h */,
-				A438FFA51A7F3A4700515DD5 /* BaiduMobAdSplash.h */,
-				A438FFA61A7F3A4700515DD5 /* BaiduMobAdSplashDelegate.h */,
-				A438FFA71A7F3A4700515DD5 /* BaiduMobAdView.h */,
-				A43800121A7F51A400515DD5 /* Mongoose */,
-				A438FFFA1A7F40A300515DD5 /* ZipArchive */,
-				A438FFAC1A7F3A9800515DD5 /* OpenUDID */,
-			);
-			name = baiduAd;
-			sourceTree = "<group>";
-		};
-		A438FFAC1A7F3A9800515DD5 /* OpenUDID */ = {
-			isa = PBXGroup;
-			children = (
-				A438FFEC1A7F3FBD00515DD5 /* Source */,
-				A438FFAD1A7F3A9800515DD5 /* OpenUDID.h */,
-				A438FFAE1A7F3A9800515DD5 /* OpenUDID.m */,
-			);
-			path = OpenUDID;
-			sourceTree = "<group>";
-		};
-		A438FFEC1A7F3FBD00515DD5 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				A438FFED1A7F3FBD00515DD5 /* CJSONDeserializer.h */,
-				A438FFEE1A7F3FBD00515DD5 /* CJSONDeserializer.m */,
-				A438FFEF1A7F3FBD00515DD5 /* CJSONSerializer.h */,
-				A438FFF01A7F3FBD00515DD5 /* CJSONSerializer.m */,
-				A438FFF11A7F3FBD00515DD5 /* JSONRepresentation.h */,
-				A438FFF21A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.h */,
-				A438FFF31A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		A438FFFA1A7F40A300515DD5 /* ZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				A438FFFB1A7F40A300515DD5 /* minizip */,
-				A43800051A7F40A300515DD5 /* ZipArchive.h */,
-				A43800061A7F40A300515DD5 /* ZipArchive.mm */,
-			);
-			path = ZipArchive;
-			sourceTree = "<group>";
-		};
-		A438FFFB1A7F40A300515DD5 /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				A438FFFC1A7F40A300515DD5 /* crypt.h */,
-				A438FFFD1A7F40A300515DD5 /* ioapi.c */,
-				A438FFFE1A7F40A300515DD5 /* ioapi.h */,
-				A438FFFF1A7F40A300515DD5 /* mztools.c */,
-				A43800001A7F40A300515DD5 /* mztools.h */,
-				A43800011A7F40A300515DD5 /* unzip.c */,
-				A43800021A7F40A300515DD5 /* unzip.h */,
-				A43800031A7F40A300515DD5 /* zip.c */,
-				A43800041A7F40A300515DD5 /* zip.h */,
-			);
-			path = minizip;
 			sourceTree = "<group>";
 		};
 		A465D2131ADF7E8C002CE071 /* DaysInLine WatchKit Extension */ = {
@@ -1389,7 +1270,6 @@
 				0B0C491718BE334F00B7CF19 /* selectCell.xib in Resources */,
 				0B1F192C18D49485000F94E5 /* star1.png in Resources */,
 				0B1D39B319851564008196D3 /* wx_friend@2x.png in Resources */,
-				A438FFA01A7F39F300515DD5 /* baidumobadsdk.bundle in Resources */,
 				0BEFA85B18D9CD3F0016EC80 /* password.png in Resources */,
 				0B92BE3618B0C4F3003AE50C /* okInAlert.png in Resources */,
 				0B1F193718D49633000F94E5 /* passwordback.png in Resources */,
@@ -1506,37 +1386,27 @@
 				0B02149418D86CBF00FF3AAC /* daylineView.m in Sources */,
 				0B929ED118154B94008E1726 /* buttonInScroll.m in Sources */,
 				A465D24D1ADFACE7002CE071 /* FMDatabase.m in Sources */,
-				A438FFF51A7F3FBD00515DD5 /* CJSONSerializer.m in Sources */,
 				0B9A53E51812274D0085FFD7 /* ViewController.m in Sources */,
 				A465D24F1ADFACE7002CE071 /* FMDatabaseAdditions.m in Sources */,
 				0BA18F6D187C41B700ADBB01 /* collectionView.m in Sources */,
 				134E8AFE189CEC6700C2F805 /* CustomIOS7AlertView.m in Sources */,
 				0B942F861896720A002864B8 /* statisticViewController.m in Sources */,
 				0B9B364A1895467600E9151A /* statisticView.m in Sources */,
-				A438000B1A7F40A300515DD5 /* ZipArchive.mm in Sources */,
 				0B1D39C119853812008196D3 /* UIImage+image_scale.m in Sources */,
 				0BD3427E19F9398C0074A74C /* CustomActionSheet.m in Sources */,
 				A465D2551ADFACE7002CE071 /* FMResultSet.m in Sources */,
-				A43800151A7F51A500515DD5 /* mongoose.c in Sources */,
 				0B9A53DF1812274D0085FFD7 /* AppDelegate.m in Sources */,
-				A43800091A7F40A300515DD5 /* unzip.c in Sources */,
 				A465D2531ADFACE7002CE071 /* FMDatabaseQueue.m in Sources */,
 				0B25F89218BA3ACD0025B0CB /* settingView.m in Sources */,
 				0BF9EF7D18BB8A9400F38370 /* SevenSwitch.m in Sources */,
-				A438FFF41A7F3FBD00515DD5 /* CJSONDeserializer.m in Sources */,
-				A438FFF61A7F3FBD00515DD5 /* NSDictionary_JSONExtensions.m in Sources */,
 				A465D2511ADFACE7002CE071 /* FMDatabasePool.m in Sources */,
-				A43800071A7F40A300515DD5 /* ioapi.c in Sources */,
-				A43800081A7F40A300515DD5 /* mztools.c in Sources */,
 				0B9A53DB1812274D0085FFD7 /* main.m in Sources */,
 				0B0D3BAD194DD54D00B2CBEE /* shareView.m in Sources */,
 				0B8F0D91186422F300FD1264 /* remindViewController.m in Sources */,
-				A438000A1A7F40A300515DD5 /* zip.c in Sources */,
 				0B916CFD1816BB2200B3F41D /* editingViewController.m in Sources */,
 				0B9009E31877DDA6008D3799 /* selectView.m in Sources */,
 				0B02149518D86CBF00FF3AAC /* homeView.m in Sources */,
 				0BF646C018BF92CC00159161 /* resultView.m in Sources */,
-				A438FFD61A7F3A9800515DD5 /* OpenUDID.m in Sources */,
 				0B452F04194DECFD00828853 /* dayLineScoller.m in Sources */,
 				0BFC22DA18D2DC9E00C9B4C5 /* buttonTranslate.m in Sources */,
 				0B9009E61877EBE4008D3799 /* CKCalendarView.m in Sources */,
@@ -1742,7 +1612,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DaysInLine",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DaysInLine/DaysInLine-Prefix.pch";
 				INFOPLIST_FILE = "DaysInLine/DaysInLine-Info.plist";
@@ -1780,7 +1654,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DaysInLine",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DaysInLine/DaysInLine-Prefix.pch";
 				INFOPLIST_FILE = "DaysInLine/DaysInLine-Info.plist";

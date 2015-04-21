@@ -6,11 +6,10 @@
 //  Copyright (c) 2013年 张力. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+
 #import "AppDelegate.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import <iAd/iAd.h>
-//#import "GADBannerView.h"
+//#import <iAd/iAd.h>
 #import "sqlite3.h"
 #import "redrawButtonDelegate.h"
 #import "drawTagDelegate.h"
@@ -18,24 +17,24 @@
 #import "setMainTextDelegate.h"
 #import <StoreKit/SKStoreProductViewController.h>
 #import "CustomActionSheet.h"
-#import "BaiduMobAdDelegateProtocol.h"
 
 //#define ADMOB_ID @"a1531ddc35a4db2"
 
 @class homeView;
 @class daylineView;
 
-@interface ViewController : UIViewController <redrawButtonDelegate,reloadTableDelegate,setMainTextDelegate,ADBannerViewDelegate,/*GADBannerViewDelegate,*/UITextFieldDelegate,UIAlertViewDelegate,SKStoreProductViewControllerDelegate,CustomActionSheetDelegate,BaiduMobAdViewDelegate>
+@interface ViewController : UIViewController <redrawButtonDelegate,reloadTableDelegate,setMainTextDelegate,UITextFieldDelegate,UIAlertViewDelegate,SKStoreProductViewControllerDelegate,CustomActionSheetDelegate>
 {
     sqlite3 *dataBase;
     NSString *databasePath;
     
     enum WXScene _scene;  //for weixin share.
-    BaiduMobAdView* sharedAdView;
 
 
    
 }
+
+
 @property (weak, nonatomic) NSObject <redrawButtonDelegate> *drawBtnDelegate;
 @property (weak, nonatomic) NSObject <drawTagDelegate> *drawLabelDelegate;
 

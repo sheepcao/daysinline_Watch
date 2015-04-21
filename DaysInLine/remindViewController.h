@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 张力. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "remindDataDelegate.h"
 //#import <Frontia/Frontia.h>
 //#import <iAd/iAd.h>

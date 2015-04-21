@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 张力. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 #import "sqlite3.h"

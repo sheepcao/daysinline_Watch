@@ -28,7 +28,7 @@
 
 
 
-@interface ViewController ()<CKCalendarDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,UIActionSheetDelegate>
+@interface ViewController ()<CKCalendarDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 
 @property (nonatomic,weak) UIImageView *background;
 @property (nonatomic,weak) homeView *homePage;
@@ -284,7 +284,6 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
     NSDateFormatter *dateFormatter= [[NSDateFormatter alloc] init];
     self.HasEventsDates = [[NSMutableArray alloc] init];
-  //  NSTimeZone *zone = [NSTimeZone systemTimeZone];
     
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
@@ -433,7 +432,11 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
     //baiduAd
     //使用嵌入广告的方法实例。
-    sharedAdView = [[BaiduMobAdView alloc] init];
+    self.bannerView = [[GADBannerView alloc] init];
+    GADRequest *request = [GADRequest request];
+    
+    self.bannerView.adUnitID = @"ca-app-pub-3074684817942615/8765769488";
+    self.bannerView.delegate  = self;
     //sharedAdView.AdUnitTag = @"myAdPlaceId1";
     //此处为广告位id，可以不进行设置，如需设置，在百度移动联盟上设置广告位id，然后将得到的id填写到此处。
     sharedAdView.AdType = BaiduMobAdViewTypeBanner;
@@ -990,56 +993,6 @@ int inwhichButton;//0=mainView,1=today,2=select,3=collect,4=analyse,5=setting.
     
 }
 
-/*
--(UIView *)makeShareView
-{
-    double width = [[UIScreen mainScreen] bounds].size.width;
-    double height = [[UIScreen mainScreen] bounds].size.height/2.5;
-    UIView *shareView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-    [shareView setBackgroundColor:[UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"action-sheet-panel" ofType:@"png"]]]];
-    shareView.alpha = 0.8f;
-    //
-    UIButton *weixin = [[UIButton alloc] init];
-    [weixin setFrame:CGRectMake(50, 30, 40, 40)];
-    [weixin setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"weixin" ofType:@"png"]] forState:UIControlStateNormal];
-    [weixin addTarget:self action:@selector(onSelectWeixin) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:weixin];
-    //
-    UIButton *wx_friend = [[UIButton alloc] init];
-    [wx_friend setFrame:CGRectMake(140, 30, 40, 40)];
-    [wx_friend setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wx_friend" ofType:@"png"]] forState:UIControlStateNormal];
-    [wx_friend addTarget:self action:@selector(onSelectwx_friend) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:wx_friend];
-    //
-    UIButton *wx_favorite = [[UIButton alloc] init];
-    [wx_favorite setFrame:CGRectMake(230, 30, 40, 40)];
-    [wx_favorite setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wx_favorite" ofType:@"png"]] forState:UIControlStateNormal];
-    [wx_favorite addTarget:self action:@selector(onSelectwx_favorite) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:wx_favorite];
-    //
-    UIButton *weibo = [[UIButton alloc] init];
-    [weibo setFrame:CGRectMake(50, 100, 40, 40)];
-    [weibo setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"weibo" ofType:@"png"]] forState:UIControlStateNormal];
-    [weibo addTarget:self action:@selector(onSelectweibo) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:weibo];
-    //
-    UIButton *Qzone = [[UIButton alloc] init];
-    [Qzone setFrame:CGRectMake(140, 100, 40, 40)];
-    [Qzone setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Qzone" ofType:@"png"]] forState:UIControlStateNormal];
-    [Qzone addTarget:self action:@selector(onSelectQzone) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:Qzone];
-    //
-    UIButton *qq = [[UIButton alloc] init];
-    [qq setFrame:CGRectMake(230, 100, 40, 40)];
-    [qq setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"qq" ofType:@"png"]] forState:UIControlStateNormal];
-    [qq addTarget:self action:@selector(onSelectqq) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:qq];
-    
-    return shareView;
-    
-
-}
-*/
 
 -(void)shareTappedWithActionSheet:(id)button
 {

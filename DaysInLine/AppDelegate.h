@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 张力. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "WXApi.h"
 #import "UIImage+image_scale.h"
 

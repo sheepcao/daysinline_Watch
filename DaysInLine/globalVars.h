@@ -8,7 +8,6 @@
 
 #ifndef DaysInLine_globalVars_h
 #define DaysInLine_globalVars_h
-#import "BaiduMobAdView.h"
 
 int workArea[96] ;
 int lifeArea[96] ;

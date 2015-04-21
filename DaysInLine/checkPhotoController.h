@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 张力. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 #import <iAd/iAd.h>
 #import "globalVars.h"
@@ -15,12 +14,8 @@
 //#define ADMOB_ID @"a1531ddc35a4db2"
 
 
-@interface checkPhotoController : UIViewController<BaiduMobAdViewDelegate>
-{
-    BaiduMobAdView* sharedAdView;
+@interface checkPhotoController : UIViewController
 
-}
-//<ADBannerViewDelegate,GADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *fullPhoto;
 - (IBAction)backToEdit:(UIButton *)sender;
